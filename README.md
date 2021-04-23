@@ -60,3 +60,27 @@ function next(n) {
 
 setInterval(() => next(1), 3000)
 ```
+
+## Thư mục: Assignment - Bài tập lớn cuối môn học
+### Yêu cầu
+1. Giải phương trình bậc 2
+2. Slideshow
+3. Trang đặt hàng đơn giản
+4. Trang đăng ký thành viên đơn giản
+
+### Bài làm
+* Giải phương trình bậc 2
+- Sử dụng OOP
+- Tự sinh số ngẫu nhiên vào textfield
+- Lưu và hiển thị số lần giải bài (Lưu vào LocalStorage)
+- Hiện thị thời gian hiện tại
+* Trang đặt hàng đơn giản
+- Tự động tính tiền khi thêm, bớt sản phẩm
+- Filter sản phẩm theo giá tiền
+* Trang đăng ký thành viên đơn giản
+- Bắt lỗi người dùng nhập sử dụng Angular
+- Có sử dụng Regex để bắt lỗi email thay thế cho [type="email"] của tag <input>
+Pattern:
+```html
+[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$
+```
