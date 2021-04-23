@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bài 01 - PS15194 - Chung Nguyễn Anh Tuấn</title>
+        <link rel="stylesheet" href="css/bai1.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    </head>
+    <body>
+        <div class="app">
+            <div class="title">
+                <p>GIẢI PHƯƠNG TRÌNH BẬC 2</p>
+                <p>-</p>
+                <p id="clock">Clock</p>
+            </div>
+
+            <div class="showEquation">
+                <h3><span id="a">a</span>x<sup>2</sup> + <span id="b">b</span>x + <span id="c">c</span> = 0</h3>
+            </div>
+
+            <div class="sCount" align="center">
+                <p id="scnt">Bạn đã giải được: {{solveC}} lần!</p>
+            </div>
+
+            <hr />
+
+            <div align="center">
+                <div class="input-group mb-3 input-group-sm" style="width: 70%">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">NHẬP A</span>
+                    </div>
+                    <input type="number" id="numberA" class="form-control form-input" ng-model="a" readonly />
+                </div>
+
+                <div class="input-group mb-3 input-group-sm" style="width: 70%">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">NHẬP B</span>
+                    </div>
+                    <input type="number" id="numberB" class="form-control form-input" ng-model="b" readonly />
+                </div>
+
+                <div class="input-group mb-3 input-group-sm" style="width: 70%">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">NHẬP C</span>
+                    </div>
+                    <input type="number" id="numberC" class="form-control form-input" ng-model="c" readonly />
+                </div>
+
+                <div align="center">
+                    <button type="button" class="btn btn-info" onclick="equa.varRandom()">Cho số</button>
+                    <button type="button" id="giai" class="btn btn-primary" onclick="equa.solve()">Giải PT</button>
+                </div>
+
+                <div class="result">
+                    <p id="rs">Kết quả của phương trình</p>
+                    <p id="x1"></p>
+                    <p id="x2"></p>
+                </div>
+
+                <div class="foot">
+                    &copy; Chung Nguyễn Anh Tuấn
+                </div>
+            </div>
+        </div>
+        <script src="js/bai1.js"></script>
+        <script src="js/snow.js"></script>
+    </body>
+</html>

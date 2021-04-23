@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chung Nguyễn Anh Tuấn - PS15194</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"> </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+        * {
+            font-family:'Roboto Condensed', sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            background: linear-gradient(to right, #16222A, #3A6073);
+        }
+
+        h2{
+            margin-top:5px;
+        }
+
+        form{
+            position: relative;
+            margin: 0 auto;
+            background-color: #eaedef;
+            top: 50px;
+            width: 400px;
+            height: inherit;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+            opacity: 0.6;
+            transition: 0.5s;
+        }
+
+        form:hover{
+            box-shadow: 0 4px 20px rgba(99, 195, 240, 0.7);
+            opacity: 1;
+            z-index: 10000;
+            transition: 0.5s;
+        }
+
+        .form-group{
+            margin-bottom: 10px !important;
+        }
+
+        .btn{
+            margin-bottom: 5px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body ng-app="b3" ng-controller="ctr1">
+    <form name="frm" class="col-5 mx-auto border border-primary" onsubmit="chk()">
+        <h2 align="center">ĐĂNG KÝ THÀNH VIÊN</h2>
+        <div class="form-group">
+            <label>Mã sinh viên:</label>
+            <input name="masv" class="form-control bg-info" ng-model="masv" minlength="7" required />
+            <em ng-if="frm.masv.$invalid" class="text-danger h6">Mã sinh viên không hợp lệ!</em>
+        </div>
+        <div class="form-group">
+            <label>Họ và tên:</label>
+            <input name="hoten" class="form-control bg-warning" minlength="3" maxlength="30" ng-model="hoten" required />      
+            <em ng-if="frm.hoten.$invalid" class="text-danger h6">Họ tên không hợp lệ!</em>
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" ng-model="email" class="form-control" required name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">   
+            <em ng-if="frm.email.$invalid" class="text-danger h6">Email không hợp lệ!</em>
+        </div>
+        <div class="form-group">
+            <label>Quốc tịch:</label>
+            <select name="qtich" id="qtich" class="form-control bg-secondary text-white" ng-model="qtich">
+                <option value="1">Việt Nam</option>
+                <option value="2">Hoa Kỳ</option>
+                <option value="3">Nhật Bản</option>
+                <option value="4">Hàn Quốc</option>
+                <option value="5">Khác</option>
+            </select>
+            <em ng-if="!qtich || qtich==0" class="text-danger h6">Hãy chọn 1 quốc tịch</em>
+        </div>
+        <div class="form-group">
+            <label>Giới tính:</label>
+            <fieldset class="border border-secondary p-3">
+                <input name="gioitinh" type="radio"  value="1" ng-model="gioitinh" > Nam &nbsp;
+                <input name="gioitinh" type="radio"  value="2" ng-model="gioitinh" > Nữ &nbsp;
+                <input name="gioitinh" type="radio"  value="3" ng-model="gioitinh" > Khác &nbsp;
+                <em ng-if="!gioitinh" class="text-danger h6"><br>Lựa chọn giới tính?</em>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <button class="btn bg-primary" type="submit">Đăng ký</button>
+        </div>
+    </form>   
+    <script>
+        app= angular.module("b3",[]);
+        app.controller("ctr1",xuly);
+        function xuly($scope){
+            
+        }
+
+        function chk(){
+            var radio = document.getElementsByName("gioitinh");
+            var checkRadio = 0;
+            for(let i = 0; i < radio.length; i++){
+                if(radio[i].checked == true){
+                    checkRadio++;
+                }
+            }
+            
+            if(checkRadio == 0){
+                alert("Thất bại!");
+            } else{
+                alert("Thành công!");
+            }
+        }
+    </script>     
+    <script src="js/snow.js"></script>
+</body>
+</html>

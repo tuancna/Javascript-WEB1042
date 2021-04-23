@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+*{
+    font-family:'Roboto Condensed', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}                
+
+body{
+    background: linear-gradient(to right, #16222A, #3A6073);
+}
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    background-color: #fff;
+    max-width: 70vw;
+    min-height: 100vh;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.container:hover{
+    box-shadow: 0 4px 20px rgba(99, 195, 240, 0.7);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.title{
+    position: absolute;
+    top: 0px;
+    width: 100%;          
+    background-color:#3A6073;
+}
+
+.title marquee{
+    line-height: 40px;
+    color:#fff;
+}
+
+.content{
+    position: absolute;
+    top: 60px;
+    width: 100%;
+}
+
+.box{
+    width: 20%;
+    float: left;
+}
+
+.item:hover{
+    box-shadow: 0 4px 15px rgba(99, 195, 240, 0.7);
+    transition: 0.3s;
+}
+
+.item{
+    position: relative;
+    width: 90%;
+    border: #ddd 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.content > p{
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.item img{
+    max-width: 95%;
+}
+
+.special{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100px;
+    border-top-right-radius: 5px;
+    color: #fff;
+    background-color: orangered;
+}
+
+.price{
+    background-color: #d0ae87;
+    color: #000;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+table{
+    width: 80%;
+}
+
+#cart_{
+    line-height: 50px;
+}
+
+td{
+    line-height: 30px;
+}
+
+input[type=number]{
+    text-align: center;
+}
+
+#fltr{
+    margin-bottom: 20px;
+    line-height: 20px;
+    width: 200px;
+}

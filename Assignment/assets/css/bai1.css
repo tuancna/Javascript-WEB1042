@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+* {
+    font-family:'Roboto Condensed', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    /*background: linear-gradient(to right, #108dc7, #ef8e38);*/
+    background: linear-gradient(to right, #16222A, #3A6073);
+}
+
+.app{
+    position: relative;
+    margin: 0 auto;
+    background-color: #eaedef;
+    width: 400px;
+    height: 500px;
+    top: calc((100vh - 500px) / 2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.app:hover{
+    box-shadow: 0 4px 20px rgba(99, 195, 240, 0.7);
+    opacity: 1;
+    z-index: 10000;
+    transition: 0.5s;
+}
+
+.title{
+    background-color: #108dc7;
+    height: 30px !important;
+    text-align: center;
+}
+
+.title p{
+    display: inline-block;
+    margin-top: 3px;
+}
+
+.form-input{
+    text-align: center;
+}
+
+.showEquation h3{
+    margin-top: 5px;
+    text-align: center;
+}
+
+.badge-success{
+    font-size: 20px im !important;
+}
+
+.sCount p{
+    margin-bottom: 15px;
+    width: 180px;
+    background-color:forestgreen;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-info{
+    margin-left: 20px;
+}
+
+.btn-primary, .btn-info{
+    margin-right: 20px;
+    width: 100px !important;
+}
+
+.result{
+    margin-top: 15px;
+    padding-top: 5px;
+    width: 70%;
+    border: #d2d5d7 1px solid;
+    border-radius: 5px;
+}
+
+.foot{
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 300px;
+    left: calc((100% - 300px) / 2);
+}

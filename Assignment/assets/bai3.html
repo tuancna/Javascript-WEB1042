@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PS15194 - Chung Nguyễn Anh Tuấn</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/bai3.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()" Scrollamount="5">
+                    CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI CỬA HÀNG ĐIỆN THOẠI POLY
+                </marquee>
+            </div>
+
+            <div class="content" align="center">
+                <p align="center">DANH SÁCH SẢN PHẨM</p>
+                <div class="box">
+                    <div class="item">
+                        <img src="img/12.jpg" alt="iPhone 12" />
+                        <div class="name" id="name1">iPhone 12 128GB</div>
+                        <div class="price" id="price1">23990000</div>
+                    </div>
+                </div>
+
+                <div class="box">
+                <div class="item">
+                        <img src="img/12mini.jpg" alt="iPhone 12 Mini" />
+                        <div class="name" id="name2">iPhone 12 Mini 64GB</div>
+                        <div class="price" id="price2">19490000</div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="item">
+                        <img src="img/S21.jpg" alt="Samsung Galaxy S21" />
+                        <div class="name" id="name3">Samsung Galaxy S21</div>
+                        <div class="price" id="price3">20990000</div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="item">
+                        <img src="img/a32.jpg" alt="Samsung Galaxy A32" />
+                        <div class="name" id="name4">Samsung Galaxy A32</div>
+                        <div class="price" id="price4">6690000</div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="item">
+                        <img src="img/a15.jpg" alt="OPPO A15" />
+                        <div class="name" id="name5">OPPO A15 (2021)</div>
+                        <div class="price" id="price5">3490000</div>
+                        <div class="special">Trả góp 0%</div>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+
+                <p align="center" id="cart_">ĐẶT HÀNG</p>
+
+                <label for="fltr">Lọc sản phẩm có giá: </label>
+                <select name="fltr" id="fltr" onchange="select(this)">
+                    <option value="" selected disabled><b>Chọn mức giá</b></option>
+                    <option value="10000000">Dưới 10 triệu</option>
+                    <option value="20000000">Dưới 20 triệu</option>
+                    <option value="30000000">Dưới 30 triệu</option>
+                </select>
+
+                <table id="cart">
+                    <tr>
+                        <th></th>
+                        <th id="item" align="left">Sản phẩm</th>
+                        <th align="left">Đơn giá</th>
+                        <th align="left">Số lượng</th>
+                        <th align="left">Thành tiền</th>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" onclick="show(this)"></td>
+                        <td>iPhone 12 128GB</td>
+                        <td>23990000</td>
+                        <td><input type="number" onchange="sum(this)" onkeyup="sum(this)" disabled value=""></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" onclick="show(this)"></td>
+                        <td>iPhone 12 Mini 64GB</td>
+                        <td>19490000</td>
+                        <td><input type="number" onchange="sum(this)" onkeyup="sum(this)" disabled value=""></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" onclick="show(this)"></td>
+                        <td>Samsung Galaxy S21</td>
+                        <td>20990000</td>
+                        <td><input type="number" onchange="sum(this)" onkeyup="sum(this)" disabled value=""></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" onclick="show(this)"></td>
+                        <td>Samsung Galaxy A32</td>
+                        <td>6690000</td>
+                        <td><input type="number" onchange="sum(this)" onkeyup="sum(this)" disabled value=""></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" onclick="show(this)"></td>
+                        <td>OPPO A15</td>
+                        <td>3490000</td>
+                        <td><input type="number" onchange="sum(this)" onkeyup="sum(this)" disabled value=""></td>
+                        <td></td>
+                    </tr>
+
+                    <tr id="footer">
+                        <th colspan="4" align="right">TỔNG</th>
+                        <th id="total"></th>
+                    </tr>
+                </table>
+        </div>
+        <script src="js/bai3.js"></script>
+    </body>
+</html>
