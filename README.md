@@ -29,3 +29,34 @@
 ```html
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 ```
+
+## Thư mục: Slideshow
+* Slideshow 8 hình ảnh, tự động phát ảnh đầu nếu như đã phát đến ảnh cuối cùng và tương tự cho ảnh đầu
+* Hàm playShow
+```javascript
+function playShow(n){  
+    var slides = document.getElementsByClassName("slideShow");
+
+    if (n > slides.length){
+        slide_index = 1
+    }
+
+    if (n < 1){
+        slide_index = slides.length
+    }
+
+    for (let index = 0; index < slides.length; index++) {  
+        slides[index].style.display = "none";  
+    }
+
+    slides[slide_index - 1].style.display = "block";  
+}
+```
+* Hàm tự động next slide
+```javascript
+function next(n) {  
+    playShow(slide_index += n);  
+}
+
+setInterval(() => next(1), 3000)
+```
