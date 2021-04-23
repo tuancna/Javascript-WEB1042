@@ -1,0 +1,12 @@
+.fa-snowflake{
+    position: absolute;
+    top: -20px;
+    animation: fall 7s linear forwards;
+    color: #fff;
+}
+
+@keyframes fall{
+    to {
+        transform: translateY(100vh);
+    }
+}
