@@ -61,7 +61,7 @@ function next(n) {
 setInterval(() => next(1), 3000)
 ```
 
-## Thư mục: Assignment - Bài tập lớn cuối môn học
+## Thư mục: Assignment - WEB1042 - FPOLY
 ### Yêu cầu
 1. Giải phương trình bậc 2
 2. Slideshow
