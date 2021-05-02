@@ -30,6 +30,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 ```
 
+### Tictactoe
+* Game tictactoe đơn giản sử dụng Javascript
+
 ## Thư mục: Slideshow
 * Slideshow 8 hình ảnh, tự động phát ảnh đầu nếu như đã phát đến ảnh cuối cùng và tương tự cho ảnh đầu
 * Hàm playShow
