@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PS15194 - Chung Nguyễn Anh Tuấn</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+            *{
+                font-family:'Roboto Condensed', sans-serif;
+                margin: 0px;
+                padding: 0px;
+            }                
+
+            body{
+                background: linear-gradient(to right, #108dc7, #ef8e38);
+            }
+
+            .container{
+                margin: 0 auto;
+                background-color: #fff;
+                max-width: 1000px;
+                min-height: 100vh;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+                opacity: 0.6;
+                transition: 0.5s;
+            }
+
+            .container:hover{
+                box-shadow: 0 4px 20px rgba(99, 195, 240, 0.7);
+                opacity: 1;
+                transition: 0.5s;
+            }
+
+            .title{
+                top: 0px;
+                width: 100%;          
+                background-color: #e28e41;
+            }
+
+            .title marquee{
+                line-height: 40px;
+                color:#fff;
+            }
+
+            table{
+                margin-top: 150px;
+                width: 315px;
+                height: 312px;
+            }
+
+            td{
+                width: 100px;
+                height: 100px;
+            }
+
+            button{
+                width: 90px;
+                height: 90px;
+                outline: none;
+                border: 0px;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()" Scrollamount="5">
+                    GAME TIC TAC TOE!!!
+                </marquee>
+            </div>
+            <center>
+                <table>
+                    <tr>
+                        <td><button onclick="mark(0)"></button></td>
+                        <td><button onclick="mark(1)"></button></td>
+                        <td><button onclick="mark(2)"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="mark(3)"></button></td>
+                        <td><button onclick="mark(4)"></button></td>
+                        <td><button onclick="mark(5)"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="mark(6)"></button></td>
+                        <td><button onclick="mark(7)"></button></td>
+                        <td><button onclick="mark(8)"></button></td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+        <script>
+            var flag = true;
+            var count = 0;
+
+            function check(){
+                count++;
+                var btn = document.getElementsByTagName("button");
+                if(btn[0].style.background == "yellow" && btn[1].style.background == "yellow" && btn[2].style.background == "yellow"){
+                    alert("Yellow Win!");
+                    location.reload();
+                    return;
+                }
+                if(btn[0].style.background == "aqua" && btn[1].style.background == "aqua" && btn[2].style.background == "aqua"){
+                    alert("Aqua Win!");
+                    location.reload();
+                    return;
+                }
+
+                if(btn[0].style.background == "yellow" && btn[3].style.background == "yellow" && btn[6].style.background == "yellow"){
+                    alert("Yellow Win!");
+                    location.reload();
+                    return;
+                }
+                if(btn[0].style.background == "aqua" && btn[3].style.background == "aqua" && btn[6].style.background == "aqua"){
+                    alert("Aqua Win!");
+                    location.reload();
+                    return;
+                }
+
+                if(btn[6].style.background == "yellow" && btn[7].style.background == "yellow" && btn[8].style.background == "yellow"){
+                    alert("Yellow Win!");
+                    location.reload();
+                    return;
+                }
+                if(btn[6].style.background == "aqua" && btn[7].style.background == "aqua" && btn[8].style.background == "aqua"){
+                    alert("Aqua Win!");
+                    location.reload();
+                    return;
+                }
+
+                if(btn[2].style.background == "yellow" && btn[5].style.background == "yellow" && btn[8].style.background == "yellow"){
+                    alert("Yellow Win!");
+                    location.reload();
+                    return;
+                }
+                if(btn[2].style.background == "aqua" && btn[5].style.background == "aqua" && btn[8].style.background == "aqua"){
+                    alert("Aqua Win!");
+                    location.reload();
+                    return;
+                }
+
+                if(btn[0].style.background == "yellow" && btn[4].style.background == "yellow" && btn[8].style.background == "yellow"){
+                    alert("Yellow Win!");
+                    location.reload();
+                    return;
+                }
+                if(btn[0].style.background == "aqua" && btn[4].style.background == "aqua" && btn[8].style.background == "aqua"){
+                    alert("Aqua Win!");
+                    location.reload();
+                    return;
+                }
+
+                if(btn[2].style.background == "yellow" && btn[4].style.background == "yellow" && btn[6].style.background == "yellow"){
+                    alert("Yellow Win!");
+                    location.reload();
+                    return;
+                }
+                if(btn[2].style.background == "aqua" && btn[4].style.background == "aqua" && btn[6].style.background == "aqua"){
+                    alert("Aqua Win!");
+                    location.reload();
+                    return;
+                }
+                if(count == 8){
+                    alert("Game Over!");
+                    location.reload();
+                    return;
+                }
+            }
+
+            function mark(index){
+                var btn = document.getElementsByTagName("button")[index];
+                btn.innerText = flag?"X":"O";
+                btn.style.background = flag?"aqua":"yellow";
+                btn.setAttribute("disabled", "true");
+                flag = !flag;
+                check();
+            }
+        </script>
+    </body>
+</html>
